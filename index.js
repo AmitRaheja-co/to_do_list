@@ -13,7 +13,7 @@ app.set('views','./views');
 
 app.get('/api',async (req,res)=>{
     const tasks = await Task.find({});
-    res.send(tasks);
+    res.send(tasks[0].des);
 
 });
 
