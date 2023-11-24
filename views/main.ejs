@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>
+        To_Do_List
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <form class="main">
+        <h1>TODO list</h1>
+        <div class="add_task">
+            <h3>Description</h3>
+            <input type="text" placeholder="What do you need to do?" name="des">
+        </div>
+        <div class="cat_date">
+            <div class="cat">
+                <h3>Category</h3>
+                <select name="Category">
+                    <option value="">Choose a Category</option>
+                    <option value="Personal">Personal</option>
+                    <option value="Work">Work</option>
+                    <option value="School">School</option>
+                    <option value="Cleaning">Cleaning</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="Date">
+                <h3>Due Date</h3>
+                <input type="date" name="date">
+            </div>
+        </div>
+        <div class="add_del">
+            <button type="submit" formaction="/add-task" formmethod="POST" class="add"><i
+                    class="fa fa-plus"></i>&nbsp;&nbsp;ADD TASK</button>
+            <button type="submit" formaction="/del-task" class="del"><i class="fa fa-trash-o"></i>&nbsp;&nbsp;DELETE
+                TASKS</button>
+        </div>
+    </form>
+    <div class="tasks_list">
+        <% for(let i of tasks){ %>
+            <div class="task">
+                <input type="checkbox" class="done" value="<%= i.id %>">
+                <label>
+                    <%= i.des %>
+                </label>
+                <div class="date">
+                    <%= i.Category %> &nbsp;&nbsp;&nbsp;&nbsp; Due Date: <%= i.date.day %> : <%= i.date%>
+                </div>
+            </div>
+            <% } %>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

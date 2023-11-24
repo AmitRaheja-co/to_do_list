@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    background-color: rgb(155, 152, 152);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main{
+    margin: 0;
+    background-color: whitesmoke;
+    width: 75vw;
+    margin-top: 2vh;
+    margin-left: 50%;
+    margin-bottom: 1vh;
+    transform: translate(-50%);
+    text-align: center;
+}
+.main h1{
+    color: rgb(80, 77, 77);
+    height: 3vh;
+}
+
+/* add task description row */
+
+.main .add_task{
+    border-top: 2px solid rgb(155, 152, 152);
+    border-bottom: 2px solid rgb(155, 152, 152);
+}
+.main .add_task h3{
+    height: 1vh;
+    font-weight: 500;
+    padding-left: 1vh;
+    text-align: left;
+    color: rgb(80, 77, 77);
+}
+.main .add_task input{
+    width: 100%;
+    height: 6vh;
+    padding-left: 1vh;
+    border: 0;
+    background-color: whitesmoke;
+}
+.main .add_task input:focus{
+    outline: none;
+    background-color: rgb(229, 227, 227);
+}
+
+/* choose category and date */
+
+.main .cat_date{
+    border-bottom: 2px solid rgb(155, 152, 152);
+    width: 100%;
+    height: 11vh;
+}
+
+/* choose category */
+.main .cat_date .cat{
+    height: 100%;
+    display: inline-block;
+    border-right: 2px solid rgb(155, 152, 152);
+    width: 50%;
+}
+.main .cat h3{
+    font-weight: 500;
+    padding-left: 1vh;
+    text-align: left;
+    color: rgb(80, 77, 77);
+}
+.main .cat_date .cat select{
+    width: 100%;
+    border: 0;
+    background-color: whitesmoke;
+    padding-left: 1vh;
+    color: grey;
+}
+.main .cat_date .cat select:focus{
+    outline: none;
+    background-color: rgb(229, 227, 227);
+}
+
+
+/* choose date */
+.main .cat_date h3{
+    font-weight: 500;
+    color: rgb(80, 77, 77);
+}
+.main .cat_date .Date{
+    display: inline-block;
+    width: 49%;
+}
+.main .cat_date input{
+    height: 2vh;
+    border: 0;
+    background-color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(80, 77, 77);
+}
+.main .cat_date input:focus{
+    outline: none;
+    background-color: rgb(229, 227, 227);
+}
+
+/* add and delete row */
+.main .add_del{
+    margin-top: 3vh;
+    height: 13vh;    
+    border-bottom: 2px solid rgb(155, 152, 152);
+}
+.main .add_del .add{
+    border: 0;
+    background-color: rgb(67, 65, 65);
+    font-size: large;
+    color: white;
+    height: 10vh;
+    width: 20%;
+}
+.main .add_del .add:hover{
+    opacity: 0.9;
+}
+.del{
+    border: 0;
+    background-color: rgb(244, 79, 79);
+    font-size: large;
+    color: white;
+    height: 10vh;
+    width: 20%;
+}
+.del:hover{
+    opacity: 0.9;
+}
+
+
+/* tasks_list */
+.tasks_list{
+    background-color: whitesmoke;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+}
+.task{
+    height: 8vh;
+    border-bottom: 2px solid rgb(155, 152, 152);
+    position: relative;
+}
+.task input[type=checkbox]{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2vh;
+    width: 2vh;
+}
+.task label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 5vh;
+}
+.task .date{
+    display: inline-block;
+    color: rgb(80, 77, 77);
+    position: relative;
+    left: 55vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+select{
+    border-radius: 0;
+}
