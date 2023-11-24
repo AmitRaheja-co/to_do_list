@@ -17,6 +17,12 @@ app.get('/api',async (req,res)=>{
 
 });
 
+app.get('/apiJson',async (req,res)=>{
+    const tasks = await Task.find({});
+    res.send(tasks);
+
+});
+
 app.listen(port,function(err){
     if(err){
         console.log(`Error in running the server: ${err}`);
